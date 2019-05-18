@@ -462,7 +462,7 @@ def gather_existing_partials(partial_path):
       # partial_dir/foo/bar.partial.Dockerfile -> foo/bar
       simple_name = fullpath[len(partial_path) + 1:-len('.partial.dockerfile')]
       with open(fullpath, 'r') as f:
-        partial_contents = f.read()
+        partial_contents = f.read() 
       partials[simple_name] = partial_contents
   return partials
 
