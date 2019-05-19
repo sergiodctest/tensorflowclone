@@ -31,6 +31,8 @@ def execute(unused_args):
   toco_str = open( FLAGS.toco_proto_file, "rb").read()
   input_str = open( FLAGS.model_input_file, "rb").read()
 
+  model_str = open( FLAGS.model_proto_file, "rb").read()
+
   output_str = tensorflow_wrap_toco.TocoConvert(model_str, toco_str, input_str)
   open(FLAGS.model_output_file, "wb").write(output_str)
   sys.exit(0)
